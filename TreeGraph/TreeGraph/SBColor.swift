@@ -10,7 +10,7 @@ import Foundation
 
 import UIKit
 
-public struct  SBNodeOptions {
+public struct SBNodeOptions {
     public static var borderColor: UIColor = .red
     public static var borderWidth: CGFloat = 1.1
 }

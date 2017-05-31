@@ -1,5 +1,5 @@
 //
-//   SBNode.swift
+//  SBNode.swift
 //  TreeGraph
 //
 //  Created by Sanjay Shingarwad on 5/17/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class  SBNode {
+class SBNode {
     var id:String
     var name: String
-    weak var parent:  SBNode? 
-    var children: Array< SBNode> = [] 
+    weak var parent: SBNode? 
+    var children: Array<SBNode> = [] 
     
     
     init(id:String, name: String = "") {
@@ -21,18 +21,18 @@ class  SBNode {
     }
     
     // MARK: Public methods
-    func addChild(_ child:  SBNode) {
+    func addChild(_ child: SBNode) {
         child.parent = self 
         self.children.append(child) 
     }
     
-    func addChildren(_ children: Array< SBNode>) {
+    func addChildren(_ children: Array<SBNode>) {
         for child in children {
             self.addChild(child)
         }
     }
     
-    func removeChild(_ child:  SBNode) {
+    func removeChild(_ child: SBNode) {
         guard let index = self.children.index(of: child) else {
             return 
         }
@@ -57,7 +57,7 @@ class  SBNode {
     }
     
     func neededSize() -> CGSize {
-        var size =  SBNodeView.nodeSize 
+        var size = SBNodeView.nodeSize 
         
         if self.children.count == 0 {
             return size 
@@ -67,18 +67,18 @@ class  SBNode {
         for child in self.children {
             size +>= child.neededSize() 
             if (self.children.last != child) {
-                size +>=  SBNodeView.separatorSize 
+                size +>= SBNodeView.separatorSize 
             }
         }
         
-        size +^=  SBNodeView.separatorSize
-        size +^=  SBNodeView.nodeSize
+        size +^= SBNodeView.separatorSize
+        size +^= SBNodeView.nodeSize
         return size
     }
     
 }
 
-extension  SBNode: Equatable {}
-func == (lhs:  SBNode, rhs:  SBNode) -> Bool {
+extension SBNode: Equatable {}
+func == (lhs: SBNode, rhs: SBNode) -> Bool {
     return lhs === rhs 
 }

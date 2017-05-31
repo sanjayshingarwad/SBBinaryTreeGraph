@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         //read and drwa tree
         if let jsonDict =  self.readJson() {
             let rootNode =  self.createNode(nodeJson: jsonDict)
-            let rootView =  SBNodeView.initFromXib(with: rootNode)
+            let rootView = SBNodeView.initFromXib(with: rootNode)
             rootView.drawChildrenNodes()
             
              SBGraphScrollView.contentSize = rootView.frame.size
@@ -33,10 +33,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func createNode(nodeJson:Dictionary<String,Any>) ->  SBNode {
+    func createNode(nodeJson:Dictionary<String,Any>) -> SBNode {
         let nodeId = nodeJson["id"] as! NSNumber
         let nodeName = nodeJson["name"]
-        let root =  SBNode.init(id:nodeId.stringValue, name: nodeName as! String)
+        let root = SBNode.init(id:nodeId.stringValue, name: nodeName as! String)
         //childs
         if let childs  = nodeJson["child"] {
             for  child in childs as! Array<Dictionary<String, Any>> {
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
     }
 
     private func readJson() -> Dictionary<String,Any>? {
-        if let path = Bundle.main.path(forResource: " SBJson", ofType: "json") {
+        if let path = Bundle.main.path(forResource: "SBJson", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 do{

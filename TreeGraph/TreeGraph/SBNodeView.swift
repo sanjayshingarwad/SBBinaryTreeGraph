@@ -1,5 +1,5 @@
 //
-//   SBNodeView.swift
+//  SBNodeView.swift
 //  TreeGraph
 //
 //  Created by Sanjay Shingarwad on 5/17/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class  SBNodeView: UIView {
+class SBNodeView: UIView {
     static let nodeSize = CGSize(width: 170, height: 90) 
     static let separatorSize = CGSize(width: 15, height: 90) 
     
@@ -25,15 +25,15 @@ class  SBNodeView: UIView {
         }
     }
     
-    var node:  SBNode? 
+    var node: SBNode? 
     @IBOutlet weak var lbName: UILabel! 
     @IBOutlet weak var connectorsView: UIView!
     @IBOutlet weak var childrenView: UIView!
     @IBOutlet weak var vertexView: UIView!
     
     // MARK: Lifecycle methods
-    class func initFromXib(with node:  SBNode) ->  SBNodeView {
-        let nodeView = Bundle.main.loadNibNamed(" SBNodeView", owner: self, options: nil)?[0] as!  SBNodeView
+    class func initFromXib(with node: SBNode) -> SBNodeView {
+        let nodeView = Bundle.main.loadNibNamed("SBNodeView", owner: self, options: nil)?[0] as! SBNodeView
         nodeView.node = node 
         nodeView.name = node.name 
         nodeView.frame.size = node.neededSize() 
@@ -60,17 +60,17 @@ class  SBNodeView: UIView {
         self.childrenView.frame.size = size 
         self.connectorsView.frame.size = size 
         
-        var origin = CGPoint(x: 0, y:  SBNodeView.nodeSize.height +  SBNodeView.separatorSize.height) 
+        var origin = CGPoint(x: 0, y: SBNodeView.nodeSize.height + SBNodeView.separatorSize.height) 
         
         for child in node.children {
-            let childView =  SBNodeView.initFromXib(with: child) 
+            let childView = SBNodeView.initFromXib(with: child) 
             self.childrenView.addSubview(childView) 
             childView.drawChildrenNodes() 
             childView.frame.origin = origin 
-            origin.x += childView.frame.width +  SBNodeView.separatorSize.width 
+            origin.x += childView.frame.width + SBNodeView.separatorSize.width 
         }
         
-        self.vertexView.frame.origin.x = (size.width -  SBNodeView.nodeSize.width) / 2 
+        self.vertexView.frame.origin.x = (size.width - SBNodeView.nodeSize.width) / 2 
         self.vertexView.layer.borderWidth =  SBVertexOptions.borderWidth
         self.vertexView.layer.borderColor =  SBVertexOptions.borderColor.cgColor
         self.drawConnectors() 
@@ -99,8 +99,8 @@ class  SBNodeView: UIView {
             return 
         }
         
-        context.setLineWidth( SBNodeOptions.borderWidth)
-        context.setStrokeColor( SBNodeOptions.borderColor.cgColor)
+        context.setLineWidth(SBNodeOptions.borderWidth)
+        context.setStrokeColor(SBNodeOptions.borderColor.cgColor)
         let firstChildView = self.childrenView.subviews.first! 
         
         if (node.children.count == 1) {
@@ -109,7 +109,7 @@ class  SBNodeView: UIView {
             context.strokePath() 
         }
         else if (node.children.count > 1) {
-            let linePosY =  SBNodeView.nodeSize.height/2 +  SBNodeView.separatorSize.height 
+            let linePosY = SBNodeView.nodeSize.height/2 + SBNodeView.separatorSize.height 
             let lastChildView = self.childrenView.subviews.last! 
             context.move(to: CGPoint(x: firstChildView.center.x, y: linePosY)) 
             context.addLine(to: CGPoint(x: lastChildView.center.x, y: linePosY)) 
