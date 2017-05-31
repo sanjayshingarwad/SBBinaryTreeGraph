@@ -1,0 +1,235 @@
+{
+    "Result": {
+        "id":99,
+        "name":"Root",
+        "child":[{
+                 "id": 0,
+                 "name": "Tree graph",
+                 "child": [
+                           {
+                           "id": 1,
+                           "name": "Tree graph",
+                           "child": [
+                                     {
+                                     "id": 4,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 5,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 6,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 7,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     }
+                                     ]
+                           },
+                           {
+                           "id": 2,
+                           "name": "Tree graph",
+                           "child": [
+                                     {
+                                     "id": 8,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 9,
+                                     "name": "Tree graph",
+                                     "child": [
+                                               {
+                                               "id": 12,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 13,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 14,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 15,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 16,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               }
+                                               ]
+                                     }
+                                     ]
+                           },
+                           {
+                           "id": 3,
+                           "name": "Tree graph",
+                           "child": [
+                                     {
+                                     "id": 10,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 11,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     }
+                                     ]
+                           }
+                           ]
+                 },
+                 {
+                 "id": 0,
+                 "name": "Tree graph",
+                 "child": [
+                           {
+                           "id": 1,
+                           "name": "Tree graph",
+                           "child": [
+                                     {
+                                     "id": 4,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 5,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 6,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 7,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     }
+                                     ]
+                           },
+                           {
+                           "id": 2,
+                           "name": "Tree graph",
+                           "child": [
+                                     {
+                                     "id": 8,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 9,
+                                     "name": "Tree graph",
+                                     "child": [
+                                               {
+                                               "id": 12,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 13,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 14,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 15,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               },
+                                               {
+                                               "id": 16,
+                                               "name": "Tree graph",
+                                               "child": [
+                                               
+                                               ]
+                                               }
+                                               ]
+                                     }
+                                     ]
+                           },
+                           {
+                           "id": 3,
+                           "name": "Tree graph",
+                           "child": [
+                                     {
+                                     "id": 10,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     },
+                                     {
+                                     "id": 11,
+                                     "name": "Tree graph",
+                                     "child": [
+                                     
+                                     ]
+                                     }
+                                     ]
+                           }
+                           ]
+                 }]
+    }
+    
+}
